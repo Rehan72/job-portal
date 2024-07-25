@@ -6,9 +6,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import bodyParser from "body-parser";
 import userRoute from "./routes/user.route.js";
-// import companyRoute from "./routes/company.route.js";
-// import jobRoute from "./routes/job.route.js";
-// import applicationRoute from "./routes/application.route.js";
+import companyRoute from "./routes/company.route.js";
+import jobRoute from "./routes/job.route.js";
+import applicationRoute from "./routes/application.route.js";
 
 dotenv.config();
 // connect db
@@ -30,9 +30,9 @@ app.use(cors(corsOptions));
 
 // api's route
 app.use("/api/v1/user", userRoute);
-// app.use("/api/v1/company", companyRoute);
-// app.use("/api/v1/job", jobRoute);
-// app.use("/api/v1/application", applicationRoute);
+app.use("/api/v1/company", companyRoute);
+app.use("/api/v1/job", jobRoute);
+app.use("/api/v1/application", applicationRoute);
 
 app.listen(PORT, () => {
     console.log(`server running at port ${PORT}`);

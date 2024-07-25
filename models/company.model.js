@@ -11,11 +11,11 @@ const companySchema= new mongoose.Schema({
     },
     webSite:{
         type:String,
-        required:true
+        // required:true
     },
     location:{
         type:String,
-        required:true
+        // required:true
     },
     logo:{
         type:String,// URl to company logo
@@ -27,4 +27,4 @@ const companySchema= new mongoose.Schema({
         required:true
     }
 },{timestamps:true})
-export const company =mongoose.model('Company',companySchema)
+export const Company = mongoose.model("Company", companySchema);
